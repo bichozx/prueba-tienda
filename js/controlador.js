@@ -1,7 +1,6 @@
 import { mercarProducto } from './mercarProducto.js'
 import { cargarInfoModal } from './infoModal.js'
 
-
 let carrito = [] 
 let producto = {}
 
@@ -10,7 +9,6 @@ let filaproductos = document.getElementById("fila")
 let modalInfoProducto = new bootstrap.Modal(document.getElementById('infoProducto'))
 let modalcompra = new bootstrap.Modal(document.getElementById('resumencompra'))
 let botonAgrgarCarrito = document.getElementById("botonadd")
-
 
 // Escucho cuando hagan clic en la fila de los productos
 filaproductos.addEventListener("click", (event) => {
@@ -33,11 +31,9 @@ botonAgrgarCarrito.addEventListener("click", (event) => {
     if (event.target.classList.contains("btn-warning")) {
         event.preventDefault(event);
 
-        //Debo capturar la cantidad y agregarla al producto
+        //capturar la cantidad y agregarla al producto
         let cantidad = document.getElementById("cantidadProducto").value
         producto.cantidad = cantidad
-
-       
 
         if (carrito.some(datosProducto => datosProducto.name === producto.name)) {
             const newProduc = carrito.map(datosProducto => {
@@ -50,7 +46,8 @@ botonAgrgarCarrito.addEventListener("click", (event) => {
             })
             newProduc.cantidad = cantidad
             carrito = [...newProduc];
-            //Pintar la capsula en el carrito
+
+            //Pinta la capsula en el carrito
             let suma = 1
             carrito.forEach((newProduc)=>{
                 suma = suma + Number(newProduc.cantidad)
@@ -73,25 +70,20 @@ botonAgrgarCarrito.addEventListener("click", (event) => {
             capsula.textContent = suma
             capsula.classList.remove("invisible")
         }
-        
         modalInfoProducto.hide()
-        
     }
-
 })
 
-//rutina para ver el carrito
+// Ver el carrito
 let botonVerCarrito = document.getElementById("vercarrito")
 botonVerCarrito.addEventListener("click", ()=>{
 
-    //recorrer el carrito y pintar los productos
+    //Carrito y pintar los productos
     let base = document.getElementById("basecarro")
 
     base.innerHTML = ""
 
-
     carrito.forEach((newProduc)=>{
-
 
         let fila = document.createElement("div")
         fila.classList.add("row")
@@ -120,7 +112,6 @@ botonVerCarrito.addEventListener("click", ()=>{
         unit.textContent = 'Quantity: ' + newProduc.cantidad
 
 
-
         //PADRES E HIJOS
         columna1.appendChild(image)
         columna2.appendChild(nameProduct)
@@ -129,13 +120,8 @@ botonVerCarrito.addEventListener("click", ()=>{
         fila.appendChild(columna1)
         fila.appendChild(columna2)
         base.appendChild(fila)
-
     })
 
-
-
     modalcompra.show()
-
-
 
 })
