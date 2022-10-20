@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlternovaShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="https://b2bmarketplace.procolombia.co/sites/default/files/styles/slider_image_product/public/images_products/simbolo_blanco.jpg"
+                    alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Alternova Shop
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" id="vercarrito">
+                        <i class="bi bi-cart-fill"></i>
+                      <span id="capsula" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
+                        99+
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        
+    </header>
+    <main class="mt-3">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4 letras" id="fila">
+
+            </div>
+        </div>
+
+    </main>
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="infoProducto" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nameProduct"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-5">
+                                    <img src="" alt="" id="imageProduct" class="img-fluid w-100">
+
+                                </div>
+
+                                <div class="col-12 col-md-7">
+                                    <h2 id="stockProduct"></h2>
+                                    <p id="unit_price"></p>
+                                    <div class="input-group mb-3">
+                                        
+                                        <input id="cantidadProducto" type="number" class="form-control" 
+                                            placeholder="Quantity" value=" ">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="botonadd" class="btn btn-warning">Add to Bag</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="resumencompra" >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <img src="https://b2bmarketplace.procolombia.co/sites/default/files/styles/slider_image_product/public/images_products/simbolo_blanco.jpg"
+                    alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <h5 class="modal-title m-1" id="exampleModalLabel">Alternova shop</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container" id="basecarro">
+  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-warning">Pay</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/llenado.js"></script>
+    <script src="js/controlador.js" type="module"></script>
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
