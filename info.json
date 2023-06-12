@@ -10,18 +10,18 @@
             "image":"https://w7.pngwing.com/pngs/227/16/png-transparent-steamed-rice-in-a-bowl-cooked-rice-glutinous-rice-bowl-sticky-rice-recipe-rice-cooker-rice-bags-thumbnail.png",
             "name": "rice",
             "unit_price": 2000,
-            "stock": 0
-        },
-        {  
-             "image":"https://licorparty.com/wp-content/uploads/2020/03/PAPITAS-DE-LIMON.jpg",
-            "name": "papitas de limón margarita",
-            "unit_price": 1500,
-            "stock": 1
+            "stock": 5
         },
         {  
             "image":"https://image.similarpng.com/very-thumbnail/2020/09/Raw-beef-meat-pieces-on-transparent-background-PNG.png",
             "name": "meat / pound",
             "unit_price": 500,
             "stock": 8
-        }
+        },
+        {  
+            "image":"https://image.pngaaa.com/312/2141312-middle.png",
+           "name": "papitas de limón margarita",
+           "unit_price": 1500,
+           "stock": 10
+       }
     ]
